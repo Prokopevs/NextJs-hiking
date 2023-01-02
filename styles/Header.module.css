@@ -1,0 +1,11 @@
+.nav__link {
+    margin-left: 55px;
+    color: #54524f;
+    text-decoration: none;
+    opacity: 0.80;
+    transition: opacity 0.1s linear;
+}
+
+.nav__link:hover {
+    opacity: 1;
+}
