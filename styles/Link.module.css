@@ -9,3 +9,9 @@
 .nav__link:hover {
     opacity: 1;
 }
+
+.intro {
+    height: 957px;
+    padding-top: 300px;
+    background: #f1eeeb url("../public/intro/1.jpg") no-repeat center / cover;
+}

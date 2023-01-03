@@ -1,20 +1,20 @@
-import { IntroStyled } from "./Intro.styled"
-import backgroundImg from "../../public/intro/1.jpg"
+import { IntroAfter, IntroInner, IntroSubtitle, IntroTitle } from "./Intro.styled"
+import { Container } from "../Header/Header.styled"
+import s from "../../styles/Link.module.css"
 
 const Intro = () => {
     return (
         <>
-        <IntroStyled src={backgroundImg.src} alt="logo"/>
-            
-            {/* <div class="container">
-                <div class="intro__inner">
-                    <h1 class="intro__title">IT´S TIME<br> FOR HIKING</h1>
-                    <h2 class="intro__subtitle">LOREMIPSUM DOLOR</h2>
-                    <a class="btn btn--white" href="#">Read more</a>
-                    <h2 class="intro__after">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do iusmod tempor
-                        incididunt ut labore et dolore magna.</h2>
-                </div>
-            </div>  */}
+        <div className={s.intro}>
+            <Container>
+                <IntroInner>
+                    <IntroTitle>IT´S TIME<br></br> FOR HIKING</IntroTitle>
+                    <IntroSubtitle>LOREMIPSUM DOLOR</IntroSubtitle>
+                    <IntroAfter>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do iusmod tempor
+                        incididunt ut labore et dolore magna.</IntroAfter>
+                </IntroInner>
+            </Container> 
+        </div>
         </>
     )
 }
