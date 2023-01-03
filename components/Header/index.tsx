@@ -1,7 +1,7 @@
 import { Container, HeaderInner, Nav, StyledHeader } from "./Header.styled"
 import logoPic from "../../public/summer/logo.png"
 import Link from "next/link"
-import s from "../../styles/Header.module.css"
+import s from "../../styles/Link.module.css"
 
 const Header = () => {
     return (
