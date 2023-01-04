@@ -24,8 +24,6 @@ export const HeaderInner = styled.div`
 `
 
 export const HeaderIMG = styled.img`
-    width: 71px;
-    height: 74px;
     @media (max-width: 575px) {
         width: 81px;
         height: 84px;

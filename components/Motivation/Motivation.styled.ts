@@ -31,6 +31,7 @@ export const MotivationSubtitle = styled.h2`
     color: #7f7770;
     font-weight: 400;
     text-align: center;
+    margin: 0 10px;
     @media (max-width: 991px) { 
         font-size: 24px;
     }

@@ -1,3 +1,4 @@
+import Features from "../components/Features"
 import Header from "../components/Header"
 import Intro from "../components/Intro"
 import Motivation from "../components/Motivation"
@@ -10,6 +11,7 @@ export default function Home() {
             <Header />
             <Intro />
             <Motivation />
+            <Features />
         </div>
     )
 }

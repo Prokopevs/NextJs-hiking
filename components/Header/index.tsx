@@ -1,4 +1,4 @@
-import { Container, HeaderInner, Nav, StyledHeader } from "./Header.styled"
+import { Container, HeaderIMG, HeaderInner, Nav, StyledHeader } from "./Header.styled"
 import logoPic from "../../public/summer/logo.png"
 import Link from "next/link"
 import s from "../../styles/Link.module.css"
@@ -8,12 +8,14 @@ const Header = () => {
         <StyledHeader>
             <Container>
                 <HeaderInner>
-                    <div>
-                        <img src={logoPic.src} alt="logo"></img>
-                    </div>
+                    <HeaderIMG src={logoPic.src} alt="logo"></HeaderIMG>
                     <Nav>
-                        <Link href="/" className={s.nav__link}>Tours</Link>
-                        <Link href="/" className={s.nav__link}>Reviews</Link>
+                        <Link href="/" className={s.nav__link}>
+                            Tours
+                        </Link>
+                        <Link href="/" className={s.nav__link}>
+                            Reviews
+                        </Link>
                     </Nav>
                 </HeaderInner>
             </Container>
