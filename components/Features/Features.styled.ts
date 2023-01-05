@@ -54,7 +54,7 @@ export const ShowImg = styled.img`
 `
 
 export const ShowContent = styled.div`
-    padding: 15px 14px 15px;
+    padding: 15px 24px 25px;
     height: 100%;
 `
 

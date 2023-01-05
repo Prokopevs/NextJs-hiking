@@ -21,3 +21,31 @@
     background: url("../public/features/shadow.png") no-repeat;
     background-position: 0 75%;
 }
+
+.explore{
+    height: 1114px;
+
+    background: #f1eeeb url("../public/explore/1.jpg") no-repeat center / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+
+@media (max-width: 991px) { 
+    .explore {
+        height: 1000px;
+    }
+}
+
+@media (max-width: 767px) { 
+    .explore {
+        height: 914px;
+    }
+}
+
+@media (max-width: 575px) { 
+    .explore {
+        height: 650px;
+    }
+}
