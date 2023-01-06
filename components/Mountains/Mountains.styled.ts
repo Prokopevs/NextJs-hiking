@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Mountain = styled.div`
     background-color: #99928d;
     position: relative;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,12 +13,9 @@ export const Mountain = styled.div`
 
 export const MountainsPhoto = styled.img`
     position: absolute;
-    top: 10%;
+    bottom: 8%;
     left: 0;
     z-index: 1;
-    @media (max-width: 991px) { 
-        top: -5%;
-    }
 `
 
 export const MountainsInner = styled.div`

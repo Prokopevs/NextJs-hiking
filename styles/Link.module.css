@@ -25,7 +25,7 @@
 .explore{
     height: 1114px;
 
-    background: #f1eeeb url("../public/explore/1.jpg") no-repeat center / cover;
+    background: #f1eeeb url("../public/explore/explore.jpg") no-repeat center / cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
