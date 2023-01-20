@@ -1,4 +1,5 @@
 import React from "react"
+import axios from 'axios';
 import { Container } from "../Header/Header.styled"
 import s from "../../styles/Link.module.css"
 import {
@@ -11,59 +12,34 @@ import {
     ShowSubtitle,
     ShowTitle,
 } from "./Features.styled"
-import img1 from "../../public/features/1.jpg"
-import img2 from "../../public/features/2.jpg"
-import img3 from "../../public/features/3.jpg"
 import { BtnBrown, TextCenter } from "../Button/Button.styled"
+import Link from "next/link"
 
-const Features = () => {
+const Features:React.FC<any> = ({data}) => {
     return (
         <div className={s.features}>
             <Container>
                 <FeaturesInner>
-                    <Show>
-                        <ShowBlock>
-                            <ShowImg src={img1.src} alt=""></ShowImg>
-                        </ShowBlock>
-                        <ShowContent>
-                            <ShowTitle>Lorem ipsum</ShowTitle>
-                            <ShowSubtitle>
-                                Lorem ipsum dolor sit amet, consectetur fdsa f sad f fasd
-                                fdsa fds afdsa ftgerth rfd hsdfh fdh
-                            </ShowSubtitle>
-                        </ShowContent>
-                    </Show>
-
-                    <Show>
-                        <ShowBlock>
-                            <ShowImg src={img2.src} alt=""></ShowImg>
-                        </ShowBlock>
-                        <ShowContent>
-                            <ShowTitle>Lorem ipsum</ShowTitle>
-                            <ShowSubtitle>
-                                Lorem ipsum dolor sit amet, consecteturdfsafds dfas f fdsa
-                                hdfs hfdsh dfs terahrt hjtsrer sfgsfd h fd.
-                            </ShowSubtitle>
-                        </ShowContent>
-                    </Show>
-
-                    <Show>
-                        <ShowBlock>
-                            <ShowImg src={img3.src} alt=""></ShowImg>
-                        </ShowBlock>
-                        <ShowContent>
-                            <ShowTitle>Lorem ipsum</ShowTitle>
-                            <ShowSubtitle>
-                                Lorem ipsum dolor sit amet, consectetu fdsa fsd fds afsda
-                                hdfs hdfsh fds hdsf jrtgsh df shsdf
-                            </ShowSubtitle>
-                        </ShowContent>
-                    </Show>
+                    {data.slice(3).map((item: any) => (
+                        <Show key={item.id}>
+                            <ShowBlock>
+                                <ShowImg src={item.photo} alt=""></ShowImg>
+                            </ShowBlock>
+                            <ShowContent>
+                                <ShowTitle>{item.title}</ShowTitle>
+                                <ShowSubtitle>
+                                    {item.subtitle.substring(0, 115) + "..."}
+                                </ShowSubtitle>
+                            </ShowContent>
+                        </Show>
+                    ))}
                 </FeaturesInner>
 
                 <FeaturesBtn>
                     <TextCenter>
-                        <BtnBrown>Show more</BtnBrown>
+                        <Link href="/tours">
+                            <BtnBrown>Show more</BtnBrown>
+                        </Link>
                     </TextCenter>
                 </FeaturesBtn>
             </Container>
@@ -72,3 +48,4 @@ const Features = () => {
 }
 
 export default Features
+

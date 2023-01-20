@@ -1,13 +1,26 @@
 import styled from 'styled-components'
 
-export const StyledHeader = styled.header`
-    width: 100%;
-    height: 130px;
+type TStyledHeader = {
+    isFixed: boolean;
+};
 
-    position: absolute;
+export const StyledHeader = styled.header<TStyledHeader>`
+    width: 100%;
+
+    position: ${(props: any) => props.isFixed ? "fixed" : "absolute"};
+    height: ${(props: any) => props.isFixed ? "90px" : "90px"};
+    background-color: ${(props: any) => props.isFixed ? "#e9e6e3" : ""};
     top: 0;
     left: 0;
     z-index: 1000;
+
+    transform: translateY(-150%);
+    animation: ani 0.7s forwards;
+
+    @keyframes ani {
+    0% {transform: translateY(-150%);}
+    100% {transform: translateY(0);}
+}
 `
 
 export const Container = styled.div`
@@ -16,14 +29,16 @@ export const Container = styled.div`
     margin: 0 auto;
 `
 
-export const HeaderInner = styled.div`
+export const HeaderInner = styled.div<TStyledHeader>`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 15px 30px 15px;
+    padding: ${(props: any) => props.isFixed ? "8px 30px 0px 30px" : "30px 15px 30px 15px"};
 `
 
-export const HeaderIMG = styled.img`
+export const HeaderIMG = styled.img<TStyledHeader>`
+    width: ${(props: any) => props.isFixed ? "71px" : ""};
+    height: ${(props: any) => props.isFixed ? "74px" : ""};
     @media (max-width: 575px) {
         width: 81px;
         height: 84px;

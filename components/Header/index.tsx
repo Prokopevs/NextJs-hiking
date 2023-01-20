@@ -3,12 +3,16 @@ import logoPic from "../../public/summer/logo.png"
 import Link from "next/link"
 import s from "../../styles/Link.module.css"
 
-const Header = () => {
+type IHeader = {
+    isFixed: boolean
+}
+
+const Header: React.FC<IHeader> = ({isFixed}) => {
     return (
-        <StyledHeader>
+        <StyledHeader isFixed={isFixed}>
             <Container>
-                <HeaderInner>
-                    <HeaderIMG src={logoPic.src} alt="logo"></HeaderIMG>
+                <HeaderInner isFixed={isFixed}>
+                    <HeaderIMG src={logoPic.src} alt="logo" isFixed={isFixed}></HeaderIMG>
                     <Nav>
                         <Link href="/" className={s.nav__link}>
                             Tours

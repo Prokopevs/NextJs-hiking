@@ -63,6 +63,7 @@ export const ShowTitle = styled.div`
     font-size: 29px;
     color: #fff;
     font-weight: 700;
+    font-family: 'Open Sans';
 `
 
 export const ShowSubtitle = styled.div`
@@ -70,8 +71,34 @@ export const ShowSubtitle = styled.div`
     color: #fff;
     font-weight: 400;
     line-height: 1.1;
+    font-family: 'Open Sans';
 `
 
 export const FeaturesBtn = styled.div`
     padding: 50px 0 80px;
+`
+
+export const ToursInner = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+`
+
+export const ToursTitle = styled.h1`
+    font-size: 50px;
+    color: #0baf52;
+    font-weight: 700;
+    font-family: 'Open Sans';
+    margin: 0;
+`
+
+export const ToursSubtitle = styled.h3`
+    font-size: 33px;
+    color: #0baf52;
+    font-weight: 600;
+    font-family: 'Open Sans';
+    margin: 0 0 8px 0;
 `
