@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react"
 import { IntroAfter, IntroInner, IntroSubtitle, IntroTitle } from "./Intro.styled"
 import { Container } from "../Header/Header.styled"
 import s from "../../styles/Link.module.css"
 
-
-const Intro = React.forwardRef((props, ref:React.LegacyRef<HTMLDivElement> | undefined) => {
-    return (
-        <>
+const Intro = React.forwardRef(
+    (props, ref: React.LegacyRef<HTMLDivElement> | undefined) => {
+        return (
             <div className={s.intro} ref={ref}>
                 <Container>
                     <IntroInner>
@@ -21,8 +20,10 @@ const Intro = React.forwardRef((props, ref:React.LegacyRef<HTMLDivElement> | und
                     </IntroInner>
                 </Container>
             </div>
-        </>
-    )
-})
+        )
+    }
+)
+
+Intro.displayName = "Intro";
 
 export default Intro

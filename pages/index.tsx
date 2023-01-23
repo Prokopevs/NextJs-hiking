@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { getTours } from '../Api/tours';
+import React, { useEffect, useState } from "react"
+import { useInView } from "react-intersection-observer"
+import { getTours } from "../Api/tours"
 import Explore from "../components/Explore"
 import Features from "../components/Features"
 import Footer from "../components/Footer"
@@ -11,20 +11,24 @@ import Motivation from "../components/Motivation"
 import Mountains from "../components/Mountains"
 import Quote from "../components/Quote"
 import Works from "../components/Works"
+import { IData } from "../models/IData"
 import { GlobalStyle } from "../styles/Global.styled"
 
-export default function Home(props:any) {
-    const {ref, inView} = useInView({
-        threshold: 0
+interface IHome {
+    data: IData[]
+}
+
+const Home: React.FC<IHome> = ({ data }) => {
+    const { ref, inView } = useInView({
+        threshold: 0,
     })
-    const data = props.data
     return (
         <div>
             <GlobalStyle />
             <Header isFixed={!inView} />
             <Intro ref={ref} />
             <Motivation />
-            <Features data={data}/>
+            <Features data={data} />
             <Works />
             <Mountains />
             <Explore />
@@ -34,6 +38,8 @@ export default function Home(props:any) {
         </div>
     )
 }
+
+export default Home
 
 export const getStaticProps = async () => {
     return getTours()

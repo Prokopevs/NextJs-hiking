@@ -33,6 +33,7 @@ export const Show = styled.div`
     box-shadow: 0 0 4px rgba(0,0,0,0.25);
     transition: box-shadow 0.2s linear;
     background: rgba(112, 101, 90, 0.7);
+    cursor: pointer;
 
     &:hover {
         box-shadow: 0 0 25px rgba(0,0,0,0.25);
@@ -64,6 +65,7 @@ export const ShowTitle = styled.div`
     color: #fff;
     font-weight: 700;
     font-family: 'Open Sans';
+    text-decoration: none;
 `
 
 export const ShowSubtitle = styled.div`
@@ -72,10 +74,15 @@ export const ShowSubtitle = styled.div`
     font-weight: 400;
     line-height: 1.1;
     font-family: 'Open Sans';
+    text-decoration: none;
 `
 
 export const FeaturesBtn = styled.div`
     padding: 50px 0 80px;
+`
+
+export const ToursStyled = styled.div`
+    margin-bottom: 40px;
 `
 
 export const ToursInner = styled.div`
@@ -93,6 +100,7 @@ export const ToursTitle = styled.h1`
     font-weight: 700;
     font-family: 'Open Sans';
     margin: 0;
+    margin-right: auto;
 `
 
 export const ToursSubtitle = styled.h3`

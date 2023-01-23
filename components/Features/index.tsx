@@ -1,5 +1,5 @@
 import React from "react"
-import axios from 'axios';
+import axios from "axios"
 import { Container } from "../Header/Header.styled"
 import s from "../../styles/Link.module.css"
 import {
@@ -14,24 +14,31 @@ import {
 } from "./Features.styled"
 import { BtnBrown, TextCenter } from "../Button/Button.styled"
 import Link from "next/link"
+import { IData } from "../../models/IData"
 
-const Features:React.FC<any> = ({data}) => {
+interface IFeatures {
+    data: IData[]
+}
+
+const Features: React.FC<IFeatures> = ({ data }) => {
     return (
         <div className={s.features}>
             <Container>
                 <FeaturesInner>
-                    {data.slice(3).map((item: any) => (
-                        <Show key={item.id}>
-                            <ShowBlock>
-                                <ShowImg src={item.photo} alt=""></ShowImg>
-                            </ShowBlock>
-                            <ShowContent>
-                                <ShowTitle>{item.title}</ShowTitle>
-                                <ShowSubtitle>
-                                    {item.subtitle.substring(0, 115) + "..."}
-                                </ShowSubtitle>
-                            </ShowContent>
-                        </Show>
+                    {data.slice(0, 3).map((item: IData, index: number) => (
+                        <Link href={`tours/${item.id}`} key={item.id}>
+                            <Show>
+                                <ShowBlock>
+                                    <ShowImg src={item.photo[0]} alt=""></ShowImg>
+                                </ShowBlock>
+                                <ShowContent>
+                                    <ShowTitle>{item.title}</ShowTitle>
+                                    <ShowSubtitle>
+                                        {item.subtitle.substring(0, 115) + "..."}
+                                    </ShowSubtitle>
+                                </ShowContent>
+                            </Show>
+                        </Link>
                     ))}
                 </FeaturesInner>
 
@@ -48,4 +55,3 @@ const Features:React.FC<any> = ({data}) => {
 }
 
 export default Features
-

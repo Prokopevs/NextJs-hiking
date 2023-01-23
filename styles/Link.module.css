@@ -32,6 +32,10 @@
     text-align: right;
 }
 
+.get__back {
+    margin-right: auto;
+}
+
 @media (max-width: 991px) { 
     .explore {
         height: 1000px;

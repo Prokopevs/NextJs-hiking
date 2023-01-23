@@ -10,6 +10,10 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
 
     background-color: #fff;
+    
+    }
+    html {
+        height: 100%;
     }
 
     *,
@@ -25,4 +29,5 @@ export const GlobalStyle = createGlobalStyle`
     a, u {
     text-decoration: none;
     }
+    
 `
