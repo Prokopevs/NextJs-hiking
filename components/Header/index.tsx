@@ -14,10 +14,10 @@ const Header: React.FC<IHeader> = ({isFixed}) => {
                 <HeaderInner isFixed={isFixed}>
                     <HeaderIMG src={logoPic.src} alt="logo" isFixed={isFixed}></HeaderIMG>
                     <Nav>
-                        <Link href="/" className={s.nav__link}>
+                        <Link href="/tours" className={s.nav__link}>
                             Tours
                         </Link>
-                        <Link href="/" className={s.nav__link}>
+                        <Link href="/reviews" className={s.nav__link}>
                             Reviews
                         </Link>
                     </Nav>
