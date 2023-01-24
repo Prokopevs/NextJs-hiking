@@ -16,7 +16,7 @@ import {
 import { getTours } from "../../Api/tours"
 import { IData } from "../../models/IData"
 import Link from "next/link"
-import { TourGetBack, TourHeader } from "./tour.styled"
+import { TourGetBack, TourHeader } from "../../styles/tour.styled"
 import getBack from "../../public/intro/return.png"
 import s from "../../styles/Link.module.css"
 

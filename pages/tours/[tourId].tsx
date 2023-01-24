@@ -11,8 +11,8 @@ import {
     TourSubtitle,
     TourText,
     TourTitle,
-} from "./tour.styled"
-import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
+} from "../../styles/tour.styled"
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from "react-responsive-carousel"
 import getBack from "../../public/intro/return.png"
 import Link from "next/link"
@@ -27,7 +27,6 @@ type IParams = {
 }
 
 const Tour: React.FC<ITour> = ({ data }) => {
-    const router = useRouter()
 
     return (
         <Container>
@@ -46,9 +45,9 @@ const Tour: React.FC<ITour> = ({ data }) => {
                 <TourSubtitle>{data.subtitle}</TourSubtitle>
                 <div>
                     <Carousel emulateTouch showStatus={false} showThumbs={false}>
-                        {data.photo.map((item) => (
+                        {data.photo.map((item, index) => (
                             <>
-                                <CarouselInner>
+                                <CarouselInner key={index}>
                                     <CarouselImg src={item}></CarouselImg>
                                 </CarouselInner>
                             </>
