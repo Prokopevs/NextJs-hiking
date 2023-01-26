@@ -31,7 +31,11 @@ export const InfoInner = styled.div`
 
 export const InfoContent = styled.div`
     overflow: hidden;
-    margin: 50px 0;
+    margin: 30px 0;
+
+    @media (max-width: 575px) {
+        margin: 10px 0;
+    }
 `
 
 export const InfoTitle = styled.div`

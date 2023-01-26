@@ -11,19 +11,19 @@ export const FeaturesInner = styled.div`
 
     @media (max-width: 991px) {
         grid-template-columns: repeat(1, 1fr);
-        padding: 0 150px;
+        padding: 0 80px;
     }
 
     @media (max-width: 767px) {
-        padding: 0 100px;
-    }
-
-    @media (max-width: 575px) {
         padding: 0 50px;
     }
 
-    @media (max-width: 420px) {
+    @media (max-width: 575px) {
         padding: 0 30px;
+    }
+
+    @media (max-width: 420px) {
+        padding: 0 10px;
     }
 `
 
@@ -57,6 +57,10 @@ export const ShowImg = styled.img`
 export const ShowContent = styled.div`
     padding: 15px 24px 25px;
     height: 100%;
+
+    @media (max-width: 575px) {
+        padding: 7px 15px 12px;
+    }
 `
 
 export const ShowTitle = styled.div`
@@ -101,6 +105,9 @@ export const ToursTitle = styled.h1`
     font-family: 'Open Sans';
     margin: 0;
     margin-right: auto;
+    @media (max-width: 575px) {
+        font-size: 40px;
+    }
 `
 
 export const ToursSubtitle = styled.h3`
@@ -109,4 +116,8 @@ export const ToursSubtitle = styled.h3`
     font-weight: 600;
     font-family: 'Open Sans';
     margin: 0 0 8px 0;
+    text-align: center;
+    @media (max-width: 575px) {
+        font-size: 28px;
+    }
 `

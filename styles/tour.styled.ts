@@ -16,6 +16,9 @@ export const TourTitle = styled.h1`
 
     margin: 40px 0 20px 0;
     margin-right: auto;
+    @media (max-width: 575px) {
+        font-size: 30px;
+    }
 `
 
 export const TourSubtitle = styled.div`
@@ -25,6 +28,10 @@ export const TourSubtitle = styled.div`
     font-family: 'Open Sans';
 
     margin-bottom: 30px;
+
+    @media (max-width: 575px) {
+        font-size: 18px;
+    }
 `
 
 export const TourImg = styled.img`
@@ -39,6 +46,10 @@ export const TourText = styled.div`
     font-family: 'Open Sans';
 
     margin: 30px 0 22px 0;
+
+    @media (max-width: 575px) {
+        font-size: 18px;
+    }
 `
 
 export const CarouselInner = styled.div`

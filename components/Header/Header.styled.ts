@@ -40,8 +40,8 @@ export const HeaderIMG = styled.img<TStyledHeader>`
     width: ${(props: any) => props.isFixed ? "71px" : ""};
     height: ${(props: any) => props.isFixed ? "74px" : ""};
     @media (max-width: 575px) {
-        width: 81px;
-        height: 84px;
+        width: 71px;
+        height: 75px;
     }
 `
 
