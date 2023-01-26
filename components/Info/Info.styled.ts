@@ -31,6 +31,7 @@ export const InfoInner = styled.div`
 
 export const InfoContent = styled.div`
     overflow: hidden;
+    margin: 50px 0;
 `
 
 export const InfoTitle = styled.div`
@@ -39,6 +40,7 @@ export const InfoTitle = styled.div`
     font-size: 33px;
     color: #deb37e;
     font-weight: 700; 
+    font-family: 'Open Sans';
     
     @media (max-width: 991px) {
         line-height: 1.1;
@@ -51,5 +53,6 @@ export const InfoSubtitle = styled.div`
     font-weight: 400;
     line-height: 1.3;
     text-align: center;
+    font-family: 'Open Sans';
 `
 

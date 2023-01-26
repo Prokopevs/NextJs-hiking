@@ -1,34 +1,22 @@
 import React from "react"
+import { IReview } from "../../models/IReview"
 import { Container } from "../Header/Header.styled"
 import { InfoContent, InfoInner, InfoSubtitle, InfoTitle } from "./Info.styled"
 
-const Info = () => {
+interface IInfo {
+    array: IReview[]
+}
+
+const Info: React.FC<IInfo> = ({ array }) => {
     return (
         <Container>
             <InfoInner>
-                <InfoContent>
-                    <InfoTitle>Lorem ipsum</InfoTitle>
-                    <InfoSubtitle>
-                        Lorem ipsum dolor sit amet, consecte sectetur adipisicing elit,
-                        tation omne ullamco laboris nisi ut aliqolore.
-                    </InfoSubtitle>
-                </InfoContent>
-
-                <InfoContent>
-                    <InfoTitle>Lorem ipsum</InfoTitle>
-                    <InfoSubtitle>
-                        Lorem ipsum dolor sit amet, consecte sectetur adipisicing elit,
-                        tation omne ullamco laboris nisi ut aliqolore.
-                    </InfoSubtitle>
-                </InfoContent>
-
-                <InfoContent>
-                    <InfoTitle>Lorem ipsum</InfoTitle>
-                    <InfoSubtitle>
-                        Lorem ipsum dolor sit amet, consecte sectetur adipisicing elit,
-                        tation omne ullamco laboris nisi ut aliqolore.
-                    </InfoSubtitle>
-                </InfoContent>
+                {array.map((item: IReview) => (
+                    <InfoContent key={item.id}>
+                        <InfoTitle>{item.name}</InfoTitle>
+                        <InfoSubtitle>{item.title}</InfoSubtitle>
+                    </InfoContent>
+                ))}
             </InfoInner>
         </Container>
     )

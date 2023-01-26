@@ -66,7 +66,7 @@ export const getStaticPaths = async () => {
     const response = await axios.get("https://635eccd803d2d4d47af65e4d.mockapi.io/tours")
     const data = response.data
 
-    const paths = data.map((tour: IData) => {
+    const paths = data.slice(0, 9).map((tour: IData) => {
         return {
             params: {
                 tourId: `${tour.id}`,

@@ -32,8 +32,6 @@ const Home: React.FC<IHome> = ({ data }) => {
             <Works />
             <Mountains />
             <Explore />
-            <Info />
-            <Quote />
             <Footer />
         </div>
     )
